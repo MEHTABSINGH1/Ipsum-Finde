@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ipsum Finde — a clean image discovery experience.">
+  <title>Ipsum Finde — Image Discovery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Ipsum Finde home">
+      <img src='logo.png' style = 'height: 60px;width: 170px;'>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">VISUAL DISCOVERY</p>
+      <h1 id="page-title">What are you looking for?</h1>
+      <p class="intro">Search a topic and turn a simple idea into a wall of inspiration.</p>
+
+      <form id="searchForm" class="search-panel">
+        <label for="searchInput">Search images</label>
+        <div class="search-row">
+          <input
+            id="searchInput"
+            name="query"
+            type="search"
+            placeholder="Try “mountains”, “architecture”..."
+            autocomplete="off"
+          >
+          <button id="searchButton" type="submit">Search <span aria-hidden="true">→</span></button>
+          <button id="clearButton" class="clear-button" type="reset">Clear</button>
+        </div>
+      </form>
+
+      <nav class="quick-picks" aria-label="Quick search suggestions">
+        <span>Explore</span>
+        <button type="button">Nature</button>
+        <button type="button">Cities</button>
+        <button type="button">Animals</button>
+        <button type="button">Space</button>
+      </nav>
+    </section>
+
+    <section class="results-section" aria-labelledby="results-heading">
+      <div class="results-header">
+        <div>
+          <p class="section-label">DISCOVERY WALL</p>
+          <h2 id="results-heading">Results</h2>
+        </div>
+        <p id="resultCount" class="result-count">Showing 0 results</p>
+      </div>
+
+      <div id="results" class="results-grid" aria-live="polite"></div>
+
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon" aria-hidden="true">⌕</div>
+        <h3>Search to see results</h3>
+        <p>Your visual collection will appear here once search is connected.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Ipsum Finde</span>
+    <span>Part 1 · Interface only</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
