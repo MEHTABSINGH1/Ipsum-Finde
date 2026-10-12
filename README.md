@@ -1,11 +1,11 @@
 # Ipsum Finde
 
-We have created a simple app with index.html,style.css, and app.js for a *image finder* app named **Ipsum Finde**
+Type a word, press Search, and images from Wikimedia Commons show up as cards.
 
-## Feaures
-- 1. Search bar 
-- 2. Category Based Searches
-- 3. Exact name matches
-
-
-
+- Search runs on Enter or the button, without reloading the page.
+- Blank searches are ignored.
+- Old results are cleared before new ones load.
+- Each card shows the image and its title, and opens the full image in a new tab.
+- Shows how many results were found.
+- The Explore chips (Nature, Cities, Animals, Space) run a search when clicked.
+- Phase 2 comepleted
