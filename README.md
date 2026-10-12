@@ -1,3 +1,11 @@
 # Ipsum Finde
 
-Ipsum Finde is a responsive image-search interface that will let users search a topic and discover images in a flexible visual grid. I chose a warm orange-and-sage palette to give the app a calm editorial feel instead of copying the reference's purple styling. I also used a large question-led hero layout so the primary action is obvious as soon as the page loads. Quick-pick chips and a clear empty state give users useful guidance while the results area is intentionally empty for Part 2.
+Type a word, press Search, and images from Wikimedia Commons show up as cards.
+
+- Search runs on Enter or the button, without reloading the page.
+- Blank searches are ignored.
+- Old results are cleared before new ones load.
+- Each card shows the image and its title, and opens the full image in a new tab.
+- Shows how many results were found.
+- The Explore chips (Nature, Cities, Animals, Space) run a search when clicked.
+- Phase 2 comepleted
