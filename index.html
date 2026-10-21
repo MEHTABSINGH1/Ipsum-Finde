@@ -55,17 +55,17 @@
 
       <div id="results" class="results-grid" aria-live="polite"></div>
 
-      <div id="emptyState" class="empty-state">
-        <div class="empty-icon" aria-hidden="true">⌕</div>
-        <h3>Search to see results</h3>
-        <p>Your visual collection will appear here once search is connected.</p>
+      <div id="emptyState" class="empty-state" role="status" aria-live="polite">
+        <div id="emptyIcon" class="empty-icon" aria-hidden="true">⌕</div>
+        <h3 id="emptyHeading">Search to see results</h3>
+        <p id="emptyMessage">Try a topic above or enter a word to find images.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <span>Ipsum Finde</span>
-    <span>Part 1 · Interface only</span>
+    <span>Part 2 · Search connected</span>
   </footer>
 
   <script src="script.js"></script>

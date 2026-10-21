@@ -224,6 +224,34 @@ button {
   min-height: 0;
 }
 
+.card {
+  display: block;
+  overflow: hidden;
+  color: var(--ink);
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  animation: card-enter 350ms ease both;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card p {
+  margin: 0;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card:hover { border-color: var(--accent); }
+
 .empty-state {
   display: grid;
   justify-items: center;
@@ -233,6 +261,19 @@ button {
   border: 1px dashed #c8d5cd;
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.45);
+}
+
+.empty-state[hidden] { display: none; }
+
+.empty-state.is-error {
+  border-color: #e8c3b6;
+  background: #fff8f5;
+}
+
+.empty-state.is-error .empty-icon {
+  color: var(--accent-dark);
+  background: #f4ddd3;
+  font-weight: 700;
 }
 
 .empty-icon {
@@ -245,6 +286,36 @@ button {
   color: var(--accent-dark);
   background: #f4ddd3;
   font-size: 28px;
+}
+
+.loading-spinner {
+  border: 4px solid #f4ddd3;
+  border-top-color: var(--accent);
+  background: transparent;
+  animation: spin 800ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
 
 .empty-state h3 {
